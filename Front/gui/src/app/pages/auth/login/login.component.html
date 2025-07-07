@@ -1,0 +1,41 @@
+<p-card class="custom-card">
+  <ng-template #title> Iniciar sesión </ng-template>
+  <ng-template #subtitle> Ingresa tus credenciales </ng-template>
+
+  <p-inputgroup class="custom-inputgroup">
+    <p-inputgroup-addon>
+      <i class="pi pi-user"></i>
+    </p-inputgroup-addon>
+    <input pInputText [(ngModel)]="text1" placeholder="Usuario" />
+  </p-inputgroup>
+
+  <p-inputgroup class="custom-inputgroup">
+    <p-inputgroup-addon>
+      <i class="pi pi-lock"></i>
+    </p-inputgroup-addon>
+    <input
+      pInputText
+      [(ngModel)]="text2"
+      type="password"
+      placeholder="Contraseña"
+    />
+  </p-inputgroup>
+
+  <ng-template #footer>
+    <div class="button-group">
+      <p-button
+        label="Cancelar"
+        severity="secondary"
+        [outlined]="true"
+        class="w-full"
+        styleClass="w-full"
+      ></p-button>
+      <p-button
+        label="Entrar"
+        severity="primary"
+        class="w-full"
+        styleClass="w-full"
+      ></p-button>
+    </div>
+  </ng-template>
+</p-card>

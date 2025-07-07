@@ -1,0 +1,36 @@
+    :host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #f4f4f4;
+    }
+
+    p-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    }
+
+    p-inputgroup {
+    margin-bottom: 1.5rem;
+    }
+
+    input[pInputText] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    }
+
+    .flex {
+    display: flex;
+    }
+
+    .gap-4 {
+    gap: 1rem;
+    }
+
+    .mt-1 {
+    margin-top: 1rem;
+    }
