@@ -18,7 +18,11 @@ logging.basicConfig(level=logging.DEBUG,
                     filemode='a')
 
 # Configuración de CORS (ajusta el origen según tu frontend)
-CORS(app)
+CORS(app,
+     origins=["https://p-seguridad-front.vercel.app"],
+     supports_credentials=True,
+     allow_headers=["Content-Type", "Authorization"],
+     methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"])
 
 # Obtener la URL de la base de datos de la variable de entorno
 DATABASE_URL = os.getenv('DATABASE_URL')

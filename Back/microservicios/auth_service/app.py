@@ -23,7 +23,11 @@ app.config['SECRET_KEY'] = 'A9d$3f8#GjLqPwzVx7!KmRtYsB2eH4Uw'
 
 db = SQLAlchemy(app)
 
-CORS(app)
+CORS(app,
+     origins=["https://p-seguridad-front.vercel.app"],
+     supports_credentials=True,
+     allow_headers=["Content-Type", "Authorization"],
+     methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"])
 
 # Modelo de usuario
 class User(db.Model):
