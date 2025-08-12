@@ -6,6 +6,7 @@ import io
 import base64
 import os
 import jwt
+from flask_cors import CORS
 import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -21,6 +22,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'A9d$3f8#GjLqPwzVx7!KmRtYsB2eH4Uw'
 
 db = SQLAlchemy(app)
+
+CORS(app)
 
 # Modelo de usuario
 class User(db.Model):
