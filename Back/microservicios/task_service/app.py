@@ -49,7 +49,7 @@ class Task(db.Model):
     create_at = db.Column(db.DateTime, nullable=False, default=datetime.datetime.utcnow)
     deadline = db.Column(db.DateTime)
     status = db.Column(db.Text, nullable=False, default='InProgress')
-    is_alive = db.Column(db.Boolean, nullable=False, default=True)  # nombre consistente
+    is_alive = db.Column('isAlive', db.Boolean, nullable=False, default=True)  # Mapeo correcto de columna
     created_by = db.Column(db.Integer, nullable=False)
 
 
