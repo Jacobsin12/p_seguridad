@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.DEBUG,
                     filemode='a')
 
 # Configuración de CORS (ajusta el origen según tu frontend)
-CORS(app, resources={r"/*": {"origins": "http://localhost:4200"}})
+CORS(app)
 
 # Obtener la URL de la base de datos de la variable de entorno
 DATABASE_URL = os.getenv('DATABASE_URL')
